@@ -1,0 +1,45 @@
+
+form
+{
+    margin-top: 0%;
+    width: 650px;
+    
+    
+}
+
+@media screen and (max-width:600px) {
+    form 
+    {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color:red;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:50px;
+}

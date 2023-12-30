@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="banner">
+    <marquee direction="right" behavior="alternate"><h2><b> Welcome to Online Grocery Store</b></h2> </marquee>
+    <div class="content">
+        <h1 class="mb-5">Fresh Items <br/> At Your Door.</h1>
+        <a routerLink="register-user"><strong>ORDER NOW </strong><i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>
+<!-- step  -->
+<div class="container mt-5 mb-5">
+    <h1 class="text-center">How to get <span style="color:steelblue" class="highlight">fresh items</span></h1>
+    <div class="row mt-5">
+        <!-- one  -->
+        <div class="col-lg-4 mt-2">
+            <div style="border: 4px solid black;" class="stepBox">
+                <h1 style="color:black;">1</h1>
+                <h4 style="color: white;">Select Items</h4>
+            </div>
+        </div>
+<!-- two -->
+        <div class="col-lg-4 mt-2">
+            <div style="border: 4px solid black;" class="stepBox">
+                <h1 style="color: black;">2</h1>
+                <h4 style="color: white;">Fill the details</h4>
+            </div>
+        </div>
+        <!-- three  -->
+        <div class="col-lg-4 mt-2">
+            <div  style="border: 4px solid black;" class="stepBox">
+                <h1 style="color: black;">3</h1>
+                <h4 style="color: white;">Your order delivered in minute</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Itemsbox  -->
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Customers <span style="color:steelblue" class="highlight">Favourites Grocery Items</span></h1>
+    <div style="margin-top: 20px;" class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let fd of itemsData;index as i">
+            <div style="background-color:beige;" class="itemsbox" *ngIf="i<=3">
+                <img src="{{fd.itemImg}}" />
+                <h1>{{fd.itemName}}</h1>
+                
+            </div>
+        </div>
+    </div>
+    <a routerLink="/register-user" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
+</div>

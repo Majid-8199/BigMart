@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+        
+			<div style="background-color:bisque;" class="signup">
+				<form  >
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="username"  [(ngModel)]="username" [ngModelOptions]="{standalone: true}"  name="txt" placeholder="User name" required>
+					<input type="email"  [(ngModel)]="email" [ngModelOptions]="{standalone: true}"  name="email" placeholder="Email" required>
+					<input type="password"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" name="pswd" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one digit, one lowercase letter, one uppercase letter, and be at least 8 characters long.">
+					<button (click)="onSignUp()" type="submit">SignUp</button>
+				</form>
+			</div>
+
+			<div style="background-color:bisque;" class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" name="email" placeholder="Email" required>
+					<input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" name="pswd" placeholder="Password" required>
+					<button type="submit" (click)="onLogin()">Login</button>
+					
+
+				</form>
+			</div>
+	</div>
+</body>
+</html>
+
